@@ -1,0 +1,8 @@
+for each basic block compute the number of instructions, 
+and keep track of that. then at the end of the basic block 
+add a call to a function that takes into account those 
+instruction counts. so that when the program is run, 
+each basic block has a function call at the end to take 
+it's instruction counts to the total. and if the basic block
+is executed, the function call is too. will need to 
+figure out what happens to loops though.
