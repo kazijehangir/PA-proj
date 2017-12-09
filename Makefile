@@ -1,7 +1,17 @@
 CC=clang
 CFLAGS=-Xclang -load -Xclang
 
-all: part1 part2
+all: clean build
+
+clean:
+	rm transformations/build/CMakeCache.txt
+
+build: transformations/countStatic/CountStaticInstructions.cpp
+	cd transformations/build && cmake .. && make &&  cd ../.. 
+	clang -O3 -emit-llvm sourcecode/part1.c -c -o sourcecode/part1.bc
+	cat texts/part1.txt
+	opt -load transformations/build/countStatic/libCountStaticPass.so -countStatic < sourcecode/part1.bc > /dev/null
+	cat texts/partEnd.txt
 
 part1: transformations/countStatic/CountStaticInstructions.cpp
 	cd transformations/build && cmake .. && make &&  cd ../.. 
