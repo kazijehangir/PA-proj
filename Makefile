@@ -1,16 +1,16 @@
 CC=clang
-CFLAGS=-Xclang -load -Xclang
+CFLAGS=-Xclang -load
 
 all: clean build
 
 clean:
-	rm transformations/build/CMakeCache.txt
+	rm -f transformations/build/CMakeCache.txt
 
-build: transformations/countStatic/CountStaticInstructions.cpp
+build: transformations/markSweep/MarkSweep.cpp
 	cd transformations/build && cmake .. && make &&  cd ../.. 
-	clang -O3 -emit-llvm sourcecode/part1.c -c -o sourcecode/part1.bc
-	cat texts/part1.txt
-	opt -load transformations/build/countStatic/libCountStaticPass.so -countStatic < sourcecode/part1.bc > /dev/null
+	clang -O0 -emit-llvm sourcecode/part1.c -c -o sourcecode/part1.bc
+	cat texts/markSweep.txt
+	opt -load transformations/build/markSweep/libMarkSweepPass.so -markSweep < sourcecode/part1.bc > /dev/null
 	cat texts/partEnd.txt
 
 part1: transformations/countStatic/CountStaticInstructions.cpp

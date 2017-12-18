@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/BranchBias.cpp" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.o"
+  "/home/kazi/PA-proj/transformations/branchBias/BranchBias.cpp" "/home/kazi/PA-proj/transformations/build/branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

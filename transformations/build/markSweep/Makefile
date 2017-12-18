@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/CMakeFiles/progress.marks
-	$(MAKE) -f CMakeFiles/Makefile2 all
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/markSweep/CMakeFiles/progress.marks
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) -f CMakeFiles/Makefile2 clean
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,70 +97,60 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) -f CMakeFiles/Makefile2 preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named MarkSweepPass
+# Convenience name for target.
+markSweep/CMakeFiles/MarkSweepPass.dir/rule:
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/CMakeFiles/MarkSweepPass.dir/rule
+.PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/rule
 
-# Build rule for target.
-MarkSweepPass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 MarkSweepPass
+# Convenience name for target.
+MarkSweepPass: markSweep/CMakeFiles/MarkSweepPass.dir/rule
+
 .PHONY : MarkSweepPass
 
 # fast build rule for target.
 MarkSweepPass/fast:
-	$(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/build
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/build
 .PHONY : MarkSweepPass/fast
 
-#=============================================================================
-# Target rules for targets named CountStaticPass
+MarkSweep.o: MarkSweep.cpp.o
 
-# Build rule for target.
-CountStaticPass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CountStaticPass
-.PHONY : CountStaticPass
+.PHONY : MarkSweep.o
 
-# fast build rule for target.
-CountStaticPass/fast:
-	$(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/build
-.PHONY : CountStaticPass/fast
+# target to build an object file
+MarkSweep.cpp.o:
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o
+.PHONY : MarkSweep.cpp.o
 
-#=============================================================================
-# Target rules for targets named CountDynamicPass
+MarkSweep.i: MarkSweep.cpp.i
 
-# Build rule for target.
-CountDynamicPass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CountDynamicPass
-.PHONY : CountDynamicPass
+.PHONY : MarkSweep.i
 
-# fast build rule for target.
-CountDynamicPass/fast:
-	$(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/build
-.PHONY : CountDynamicPass/fast
+# target to preprocess a source file
+MarkSweep.cpp.i:
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i
+.PHONY : MarkSweep.cpp.i
 
-#=============================================================================
-# Target rules for targets named BranchBiasPass
+MarkSweep.s: MarkSweep.cpp.s
 
-# Build rule for target.
-BranchBiasPass: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 BranchBiasPass
-.PHONY : BranchBiasPass
+.PHONY : MarkSweep.s
 
-# fast build rule for target.
-BranchBiasPass/fast:
-	$(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/build
-.PHONY : BranchBiasPass/fast
+# target to generate assembly for a file
+MarkSweep.cpp.s:
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s
+.PHONY : MarkSweep.cpp.s
 
 # Help Target
 help:
@@ -169,11 +159,11 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
 	@echo "... MarkSweepPass"
-	@echo "... CountStaticPass"
-	@echo "... CountDynamicPass"
-	@echo "... BranchBiasPass"
+	@echo "... edit_cache"
+	@echo "... MarkSweep.o"
+	@echo "... MarkSweep.i"
+	@echo "... MarkSweep.s"
 .PHONY : help
 
 
@@ -185,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

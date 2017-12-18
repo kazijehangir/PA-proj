@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/BranchBias.cpp
+/home/kazi/PA-proj/transformations/branchBias/BranchBias.cpp
 llvm/IR/Function.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/llvm/IR/Function.h
+/home/kazi/PA-proj/transformations/branchBias/llvm/IR/Function.h
 llvm/IR/LegacyPassManager.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/llvm/IR/LegacyPassManager.h
+/home/kazi/PA-proj/transformations/branchBias/llvm/IR/LegacyPassManager.h
 llvm/Pass.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/llvm/Pass.h
+/home/kazi/PA-proj/transformations/branchBias/llvm/Pass.h
 llvm/Support/raw_ostream.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/llvm/Support/raw_ostream.h
+/home/kazi/PA-proj/transformations/branchBias/llvm/Support/raw_ostream.h
 llvm/Transforms/IPO/PassManagerBuilder.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/branchBias/llvm/Transforms/IPO/PassManagerBuilder.h
+/home/kazi/PA-proj/transformations/branchBias/llvm/Transforms/IPO/PassManagerBuilder.h
 
 /usr/lib/llvm-4.0/include/llvm-c/Types.h
 llvm/Support/DataTypes.h

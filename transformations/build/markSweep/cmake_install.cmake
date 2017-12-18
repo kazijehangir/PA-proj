@@ -1,4 +1,4 @@
-# Install script for directory: /home/kazi/PA-proj/transformations/branchBias
+# Install script for directory: /home/kazi/PA-proj/transformations/markSweep
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

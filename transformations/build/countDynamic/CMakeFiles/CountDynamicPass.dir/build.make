@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations"
+CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build"
+CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
 
 # Include any dependencies generated for this target.
 include countDynamic/CMakeFiles/CountDynamicPass.dir/depend.make
@@ -59,16 +59,16 @@ include countDynamic/CMakeFiles/CountDynamicPass.dir/flags.make
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o: countDynamic/CMakeFiles/CountDynamicPass.dir/flags.make
 countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o: ../countDynamic/CountDynamicInstructions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o -c "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countDynamic/CountDynamicInstructions.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o"
+	cd /home/kazi/PA-proj/transformations/build/countDynamic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o -c /home/kazi/PA-proj/transformations/countDynamic/CountDynamicInstructions.cpp
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countDynamic/CountDynamicInstructions.cpp" > CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i
+	cd /home/kazi/PA-proj/transformations/build/countDynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kazi/PA-proj/transformations/countDynamic/CountDynamicInstructions.cpp > CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countDynamic/CountDynamicInstructions.cpp" -o CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s
+	cd /home/kazi/PA-proj/transformations/build/countDynamic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kazi/PA-proj/transformations/countDynamic/CountDynamicInstructions.cpp -o CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o.requires:
 
@@ -91,8 +91,8 @@ CountDynamicPass_EXTERNAL_OBJECTS =
 countDynamic/libCountDynamicPass.so: countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o
 countDynamic/libCountDynamicPass.so: countDynamic/CMakeFiles/CountDynamicPass.dir/build.make
 countDynamic/libCountDynamicPass.so: countDynamic/CMakeFiles/CountDynamicPass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libCountDynamicPass.so"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CountDynamicPass.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libCountDynamicPass.so"
+	cd /home/kazi/PA-proj/transformations/build/countDynamic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CountDynamicPass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 countDynamic/CMakeFiles/CountDynamicPass.dir/build: countDynamic/libCountDynamicPass.so
@@ -104,10 +104,10 @@ countDynamic/CMakeFiles/CountDynamicPass.dir/requires: countDynamic/CMakeFiles/C
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/requires
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/clean:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" && $(CMAKE_COMMAND) -P CMakeFiles/CountDynamicPass.dir/cmake_clean.cmake
+	cd /home/kazi/PA-proj/transformations/build/countDynamic && $(CMAKE_COMMAND) -P CMakeFiles/CountDynamicPass.dir/cmake_clean.cmake
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/clean
 
 countDynamic/CMakeFiles/CountDynamicPass.dir/depend:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countDynamic" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic/CMakeFiles/CountDynamicPass.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kazi/PA-proj/transformations /home/kazi/PA-proj/transformations/countDynamic /home/kazi/PA-proj/transformations/build /home/kazi/PA-proj/transformations/build/countDynamic /home/kazi/PA-proj/transformations/build/countDynamic/CMakeFiles/CountDynamicPass.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/depend
 

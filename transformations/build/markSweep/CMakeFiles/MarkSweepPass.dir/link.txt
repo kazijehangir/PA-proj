@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared  -o libMarkSweepPass.so CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o  -L/usr/lib/llvm-4.0/lib 

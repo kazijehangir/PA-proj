@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations"
+CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build"
+CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/branchBias/CMakeFiles/progress.marks"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 branchBias/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" 0
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/branchBias/CMakeFiles/progress.marks
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 branchBias/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 branchBias/clean
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 branchBias/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 branchBias/preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 branchBias/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 branchBias/preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 branchBias/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 branchBias/CMakeFiles/BranchBiasPass.dir/rule:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 branchBias/CMakeFiles/BranchBiasPass.dir/rule
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 branchBias/CMakeFiles/BranchBiasPass.dir/rule
 .PHONY : branchBias/CMakeFiles/BranchBiasPass.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ BranchBiasPass: branchBias/CMakeFiles/BranchBiasPass.dir/rule
 
 # fast build rule for target.
 BranchBiasPass/fast:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/build
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/build
 .PHONY : BranchBiasPass/fast
 
 BranchBias.o: BranchBias.cpp.o
@@ -131,7 +131,7 @@ BranchBias.o: BranchBias.cpp.o
 
 # target to build an object file
 BranchBias.cpp.o:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.o
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.o
 .PHONY : BranchBias.cpp.o
 
 BranchBias.i: BranchBias.cpp.i
@@ -140,7 +140,7 @@ BranchBias.i: BranchBias.cpp.i
 
 # target to preprocess a source file
 BranchBias.cpp.i:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.i
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.i
 .PHONY : BranchBias.cpp.i
 
 BranchBias.s: BranchBias.cpp.s
@@ -149,7 +149,7 @@ BranchBias.s: BranchBias.cpp.s
 
 # target to generate assembly for a file
 BranchBias.cpp.s:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.s
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/BranchBias.cpp.s
 .PHONY : BranchBias.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

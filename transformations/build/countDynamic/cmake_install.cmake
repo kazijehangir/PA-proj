@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countDynamic
+# Install script for directory: /home/kazi/PA-proj/transformations/countDynamic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

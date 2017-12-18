@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations"
+CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build"
+CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic/CMakeFiles/progress.marks"
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/CMakeFiles" 0
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/countDynamic/CMakeFiles/progress.marks
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/clean
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/preinstall
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 countDynamic/CMakeFiles/CountDynamicPass.dir/rule:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/CMakeFiles/CountDynamicPass.dir/rule
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countDynamic/CMakeFiles/CountDynamicPass.dir/rule
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ CountDynamicPass: countDynamic/CMakeFiles/CountDynamicPass.dir/rule
 
 # fast build rule for target.
 CountDynamicPass/fast:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/build
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/build
 .PHONY : CountDynamicPass/fast
 
 CountDynamicInstructions.o: CountDynamicInstructions.cpp.o
@@ -131,7 +131,7 @@ CountDynamicInstructions.o: CountDynamicInstructions.cpp.o
 
 # target to build an object file
 CountDynamicInstructions.cpp.o:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.o
 .PHONY : CountDynamicInstructions.cpp.o
 
 CountDynamicInstructions.i: CountDynamicInstructions.cpp.i
@@ -140,7 +140,7 @@ CountDynamicInstructions.i: CountDynamicInstructions.cpp.i
 
 # target to preprocess a source file
 CountDynamicInstructions.cpp.i:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.i
 .PHONY : CountDynamicInstructions.cpp.i
 
 CountDynamicInstructions.s: CountDynamicInstructions.cpp.s
@@ -149,7 +149,7 @@ CountDynamicInstructions.s: CountDynamicInstructions.cpp.s
 
 # target to generate assembly for a file
 CountDynamicInstructions.cpp.s:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s
+	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/CountDynamicInstructions.cpp.s
 .PHONY : CountDynamicInstructions.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations
+# Install script for directory: /home/kazi/PA-proj/transformations
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,9 +34,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countStatic/cmake_install.cmake")
-  include("/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/countDynamic/cmake_install.cmake")
-  include("/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/branchBias/cmake_install.cmake")
+  include("/home/kazi/PA-proj/transformations/build/markSweep/cmake_install.cmake")
+  include("/home/kazi/PA-proj/transformations/build/countStatic/cmake_install.cmake")
+  include("/home/kazi/PA-proj/transformations/build/countDynamic/cmake_install.cmake")
+  include("/home/kazi/PA-proj/transformations/build/branchBias/cmake_install.cmake")
 
 endif()
 
@@ -48,5 +49,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kazi/PA-proj/transformations/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

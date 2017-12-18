@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/CountStaticInstructions.cpp
+/home/kazi/PA-proj/transformations/countStatic/CountStaticInstructions.cpp
 llvm/ADT/StringRef.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/ADT/StringRef.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/ADT/StringRef.h
 llvm/IR/Function.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/IR/Function.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Function.h
 llvm/IR/Instruction.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/IR/Instruction.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Instruction.h
 llvm/IR/LegacyPassManager.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/IR/LegacyPassManager.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/IR/LegacyPassManager.h
 llvm/IR/Module.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/IR/Module.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Module.h
 llvm/IR/Verifier.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/IR/Verifier.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Verifier.h
 llvm/Pass.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/Pass.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/Pass.h
 llvm/Support/raw_ostream.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/Support/raw_ostream.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/Support/raw_ostream.h
 llvm/Transforms/IPO/PassManagerBuilder.h
-/mnt/OS/LUMS-Current/Fall2017/CS4612 - Program Analysis/Assignment2/transformations/countStatic/llvm/Transforms/IPO/PassManagerBuilder.h
+/home/kazi/PA-proj/transformations/countStatic/llvm/Transforms/IPO/PassManagerBuilder.h
 map
 -
 string
