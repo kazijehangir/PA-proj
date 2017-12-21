@@ -9,7 +9,9 @@
 #include "llvm/Transforms/IPO/PassManagerBuilder.h"
 
 #include <map>
+#include <queue>
 #include <string>
+#include <unordered_set>
 
 using namespace llvm;
 
@@ -22,25 +24,70 @@ struct MarkSweepPass : public FunctionPass {
 
   StringRef getPassName() { return "MarkSweepPass"; }
 
-  virtual bool runOnFunction(Function &F) {
-    for (auto &B : F) {
-      for (auto &I : B) {
-        counts[std::string(I.getOpcodeName())]++;
+  virtual bool runOnFunction(Function& F) {
+    auto workList = std::queue<Instruction*>();
+    auto marked = std::unordered_set<Instruction*>();
+    // Initialize work list with critical instructions.
+    for (auto& B : F) {
+      for (auto& I : B) {
+        if (I.mayHaveSideEffects()) {
+          marked.insert(&I);
+          workList.push(&I);
+        }
       }
     }
-    int total = 0;
-    errs() << "Instruction counts:\n";
-    for (const auto &op : counts) {
-      total += op.second;
-      errs() << op.first << " " << op.second << "\n";
+    // Perform Mark phase.
+    while (!workList.empty()) {
+      Instruction* currInst = workList.front();
+      workList.pop();
+      for (auto* d : getDefiningOfOps(currInst)) {
+        auto search = marked.find(d);
+        if (search == marked.end()) {
+          marked.insert(d);
+          workList.push(d);
+        }
+      }
+      for (auto* b : getRDF(currInst->getParent())) {
+        auto* term = b->getTerminator();
+        if (term) {
+          Instruction* lastInst = dyn_cast<Instruction>(term);
+          marked.insert(lastInst);
+          workList.push(lastInst);
+        }
+      }
     }
-    errs() << "TOTAL " << total << "\n";
-    return false;
+    // Perform the Sweep phase.
+    for (auto& B : F) {
+      for (auto& I : B) {
+        auto search = marked.find(&I);
+        if (search == marked.end()) {
+          errs() << "found unmarked inst\n";
+        }
+      }
+    }
+    return true;
+  }
+
+  std::vector<Instruction*> getDefiningOfOps(Instruction* currInst) {
+    std::vector<Instruction*> def;
+    for (int i = 0; i < currInst->getNumOperands(); i++) {
+      auto* val = currInst->getOperand(i);
+      Instruction* inst = dyn_cast<Instruction>(val);
+      if (inst) {
+        def.push_back(inst);
+      }
+    }
+    return def;
+  }
+
+  std::vector<BasicBlock*> getRDF(BasicBlock* b) {
+    std::vector<BasicBlock*> rdf;
+    rdf.push_back(b);
+    return rdf;
   }
 };
-}
+}  // namespace
 
 char MarkSweepPass::ID = 0;
-static RegisterPass<MarkSweepPass> X("markSweep",
-                                       "Count Static Instructions", false,
-                                       false);
+static RegisterPass<MarkSweepPass> X("markSweep", "Count Static Instructions",
+                                     false, false);
