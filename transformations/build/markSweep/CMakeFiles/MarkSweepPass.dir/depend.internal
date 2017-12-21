@@ -52,6 +52,7 @@ markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o
  /usr/lib/llvm-4.0/include/llvm/IR/GlobalObject.h
  /usr/lib/llvm-4.0/include/llvm/IR/GlobalValue.h
  /usr/lib/llvm-4.0/include/llvm/IR/GlobalVariable.h
+ /usr/lib/llvm-4.0/include/llvm/IR/InstrTypes.h
  /usr/lib/llvm-4.0/include/llvm/IR/Instruction.def
  /usr/lib/llvm-4.0/include/llvm/IR/Instruction.h
  /usr/lib/llvm-4.0/include/llvm/IR/Intrinsics.gen

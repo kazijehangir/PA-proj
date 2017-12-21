@@ -1,5 +1,6 @@
 #include "llvm/ADT/StringRef.h"
 #include "llvm/IR/Function.h"
+#include "llvm/IR/InstrTypes.h"
 #include "llvm/IR/Instruction.h"
 #include "llvm/IR/LegacyPassManager.h"
 #include "llvm/IR/Module.h"
@@ -36,10 +37,14 @@ struct MarkSweepPass : public FunctionPass {
         }
       }
     }
+    errs() << "Initialization done.\n";
+
     // Perform Mark phase.
     while (!workList.empty()) {
       Instruction* currInst = workList.front();
+      errs() << "Evaluating instruction: " << currInst->getOpcodeName() << "\n";
       workList.pop();
+      errs() << "Worklist size: " << workList.size() << "\n";
       for (auto* d : getDefiningOfOps(currInst)) {
         auto search = marked.find(d);
         if (search == marked.end()) {
@@ -47,24 +52,37 @@ struct MarkSweepPass : public FunctionPass {
           workList.push(d);
         }
       }
+      errs() << "Added defining instructions for operands.\n";
+      errs() << "Worklist size: " << workList.size() << "\n";
+
       for (auto* b : getRDF(currInst->getParent())) {
         auto* term = b->getTerminator();
         if (term) {
           Instruction* lastInst = dyn_cast<Instruction>(term);
-          marked.insert(lastInst);
-          workList.push(lastInst);
+          auto search = marked.find(lastInst);
+          if (search == marked.end()) {
+            marked.insert(lastInst);
+            workList.push(lastInst);
+          }
         }
       }
+      errs() << "Added term inst from parent rdf BB.\n";
+      errs() << "Worklist size: " << workList.size() << "\n";
     }
+    errs() << "Mark phase done.\n";
+
     // Perform the Sweep phase.
     for (auto& B : F) {
       for (auto& I : B) {
         auto search = marked.find(&I);
         if (search == marked.end()) {
-          errs() << "found unmarked inst\n";
+          errs() << "found unmarked (noncritical) inst\n";
+          errs() << "instruction: " << I.getOpcodeName() << "\n";
         }
       }
     }
+    errs() << "Sweep phase done.\n";
+
     return true;
   }
 
