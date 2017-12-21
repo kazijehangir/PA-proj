@@ -1,0 +1,10 @@
+-CS4612 - Program Analysis - Assignment 2
+-18100068 - Jehangir Kazi
+-
+-Part 1 & Part2 done.
+-Run 'make all' in the root to run.
+-
+-Run make {part1 | part2} to run a specific part.
+-
+-Part1 operates on sourcecode/part1.c
+-Part2 operates on sourcecode/compression.c
