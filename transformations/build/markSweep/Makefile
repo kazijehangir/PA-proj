@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
+CMAKE_SOURCE_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
+CMAKE_BINARY_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/markSweep/CMakeFiles/progress.marks
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep/CMakeFiles/progress.marks"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 markSweep/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/clean
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 markSweep/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 markSweep/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 markSweep/CMakeFiles/MarkSweepPass.dir/rule:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 markSweep/CMakeFiles/MarkSweepPass.dir/rule
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 markSweep/CMakeFiles/MarkSweepPass.dir/rule
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ MarkSweepPass: markSweep/CMakeFiles/MarkSweepPass.dir/rule
 
 # fast build rule for target.
 MarkSweepPass/fast:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/build
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/build
 .PHONY : MarkSweepPass/fast
 
 MarkSweep.o: MarkSweep.cpp.o
@@ -131,7 +131,7 @@ MarkSweep.o: MarkSweep.cpp.o
 
 # target to build an object file
 MarkSweep.cpp.o:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o
 .PHONY : MarkSweep.cpp.o
 
 MarkSweep.i: MarkSweep.cpp.i
@@ -140,7 +140,7 @@ MarkSweep.i: MarkSweep.cpp.i
 
 # target to preprocess a source file
 MarkSweep.cpp.i:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i
 .PHONY : MarkSweep.cpp.i
 
 MarkSweep.s: MarkSweep.cpp.s
@@ -149,7 +149,7 @@ MarkSweep.s: MarkSweep.cpp.s
 
 # target to generate assembly for a file
 MarkSweep.cpp.s:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s
 .PHONY : MarkSweep.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

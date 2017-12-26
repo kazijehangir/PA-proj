@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/kazi/PA-proj/transformations/branchBias/BranchBias.cpp
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/BranchBias.cpp
 llvm/IR/Function.h
-/home/kazi/PA-proj/transformations/branchBias/llvm/IR/Function.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/llvm/IR/Function.h
 llvm/IR/LegacyPassManager.h
-/home/kazi/PA-proj/transformations/branchBias/llvm/IR/LegacyPassManager.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/llvm/IR/LegacyPassManager.h
 llvm/Pass.h
-/home/kazi/PA-proj/transformations/branchBias/llvm/Pass.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/llvm/Pass.h
 llvm/Support/raw_ostream.h
-/home/kazi/PA-proj/transformations/branchBias/llvm/Support/raw_ostream.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/llvm/Support/raw_ostream.h
 llvm/Transforms/IPO/PassManagerBuilder.h
-/home/kazi/PA-proj/transformations/branchBias/llvm/Transforms/IPO/PassManagerBuilder.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/branchBias/llvm/Transforms/IPO/PassManagerBuilder.h
 
 /usr/lib/llvm-4.0/include/llvm-c/Types.h
 llvm/Support/DataTypes.h

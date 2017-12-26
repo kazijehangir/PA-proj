@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
+CMAKE_SOURCE_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
+CMAKE_BINARY_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build"
 
 #=============================================================================
 # Directory level rules for directory markSweep
@@ -84,7 +84,7 @@ markSweep/preinstall:
 markSweep/CMakeFiles/MarkSweepPass.dir/all:
 	$(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/depend
 	$(MAKE) -f markSweep/CMakeFiles/MarkSweepPass.dir/build.make markSweep/CMakeFiles/MarkSweepPass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=7,8 "Built target MarkSweepPass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=7,8 "Built target MarkSweepPass"
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/all
 
 # Include target in all.
@@ -94,9 +94,9 @@ all: markSweep/CMakeFiles/MarkSweepPass.dir/all
 
 # Build rule for subdir invocation for target.
 markSweep/CMakeFiles/MarkSweepPass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 markSweep/CMakeFiles/MarkSweepPass.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/rule
 
 # Convenience name for target.
@@ -139,7 +139,7 @@ countStatic/preinstall:
 countStatic/CMakeFiles/CountStaticPass.dir/all:
 	$(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/depend
 	$(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=5,6 "Built target CountStaticPass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=5,6 "Built target CountStaticPass"
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/all
 
 # Include target in all.
@@ -149,9 +149,9 @@ all: countStatic/CMakeFiles/CountStaticPass.dir/all
 
 # Build rule for subdir invocation for target.
 countStatic/CMakeFiles/CountStaticPass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 countStatic/CMakeFiles/CountStaticPass.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ countDynamic/preinstall:
 countDynamic/CMakeFiles/CountDynamicPass.dir/all:
 	$(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/depend
 	$(MAKE) -f countDynamic/CMakeFiles/CountDynamicPass.dir/build.make countDynamic/CMakeFiles/CountDynamicPass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=3,4 "Built target CountDynamicPass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=3,4 "Built target CountDynamicPass"
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/all
 
 # Include target in all.
@@ -204,9 +204,9 @@ all: countDynamic/CMakeFiles/CountDynamicPass.dir/all
 
 # Build rule for subdir invocation for target.
 countDynamic/CMakeFiles/CountDynamicPass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 countDynamic/CMakeFiles/CountDynamicPass.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : countDynamic/CMakeFiles/CountDynamicPass.dir/rule
 
 # Convenience name for target.
@@ -249,7 +249,7 @@ branchBias/preinstall:
 branchBias/CMakeFiles/BranchBiasPass.dir/all:
 	$(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/depend
 	$(MAKE) -f branchBias/CMakeFiles/BranchBiasPass.dir/build.make branchBias/CMakeFiles/BranchBiasPass.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=1,2 "Built target BranchBiasPass"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=1,2 "Built target BranchBiasPass"
 .PHONY : branchBias/CMakeFiles/BranchBiasPass.dir/all
 
 # Include target in all.
@@ -259,9 +259,9 @@ all: branchBias/CMakeFiles/BranchBiasPass.dir/all
 
 # Build rule for subdir invocation for target.
 branchBias/CMakeFiles/BranchBiasPass.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 branchBias/CMakeFiles/BranchBiasPass.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : branchBias/CMakeFiles/BranchBiasPass.dir/rule
 
 # Convenience name for target.

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
+CMAKE_SOURCE_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
+CMAKE_BINARY_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build"
 
 # Include any dependencies generated for this target.
 include markSweep/CMakeFiles/MarkSweepPass.dir/depend.make
@@ -59,16 +59,16 @@ include markSweep/CMakeFiles/MarkSweepPass.dir/flags.make
 
 markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o: markSweep/CMakeFiles/MarkSweepPass.dir/flags.make
 markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o: ../markSweep/MarkSweep.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o"
-	cd /home/kazi/PA-proj/transformations/build/markSweep && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o -c /home/kazi/PA-proj/transformations/markSweep/MarkSweep.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o -c "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/MarkSweep.cpp"
 
 markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i"
-	cd /home/kazi/PA-proj/transformations/build/markSweep && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kazi/PA-proj/transformations/markSweep/MarkSweep.cpp > CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/MarkSweep.cpp" > CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.i
 
 markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s"
-	cd /home/kazi/PA-proj/transformations/build/markSweep && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kazi/PA-proj/transformations/markSweep/MarkSweep.cpp -o CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/MarkSweep.cpp" -o CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.s
 
 markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o.requires:
 
@@ -91,8 +91,8 @@ MarkSweepPass_EXTERNAL_OBJECTS =
 markSweep/libMarkSweepPass.so: markSweep/CMakeFiles/MarkSweepPass.dir/MarkSweep.cpp.o
 markSweep/libMarkSweepPass.so: markSweep/CMakeFiles/MarkSweepPass.dir/build.make
 markSweep/libMarkSweepPass.so: markSweep/CMakeFiles/MarkSweepPass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libMarkSweepPass.so"
-	cd /home/kazi/PA-proj/transformations/build/markSweep && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MarkSweepPass.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libMarkSweepPass.so"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MarkSweepPass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 markSweep/CMakeFiles/MarkSweepPass.dir/build: markSweep/libMarkSweepPass.so
@@ -104,10 +104,10 @@ markSweep/CMakeFiles/MarkSweepPass.dir/requires: markSweep/CMakeFiles/MarkSweepP
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/requires
 
 markSweep/CMakeFiles/MarkSweepPass.dir/clean:
-	cd /home/kazi/PA-proj/transformations/build/markSweep && $(CMAKE_COMMAND) -P CMakeFiles/MarkSweepPass.dir/cmake_clean.cmake
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" && $(CMAKE_COMMAND) -P CMakeFiles/MarkSweepPass.dir/cmake_clean.cmake
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/clean
 
 markSweep/CMakeFiles/MarkSweepPass.dir/depend:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kazi/PA-proj/transformations /home/kazi/PA-proj/transformations/markSweep /home/kazi/PA-proj/transformations/build /home/kazi/PA-proj/transformations/build/markSweep /home/kazi/PA-proj/transformations/build/markSweep/CMakeFiles/MarkSweepPass.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/markSweep/CMakeFiles/MarkSweepPass.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : markSweep/CMakeFiles/MarkSweepPass.dir/depend
 

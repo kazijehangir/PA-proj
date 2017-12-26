@@ -6,25 +6,25 @@
 
 #IncludeRegexTransform: 
 
-/home/kazi/PA-proj/transformations/countStatic/CountStaticInstructions.cpp
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/CountStaticInstructions.cpp
 llvm/ADT/StringRef.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/ADT/StringRef.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/ADT/StringRef.h
 llvm/IR/Function.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Function.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/IR/Function.h
 llvm/IR/Instruction.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Instruction.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/IR/Instruction.h
 llvm/IR/LegacyPassManager.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/IR/LegacyPassManager.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/IR/LegacyPassManager.h
 llvm/IR/Module.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Module.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/IR/Module.h
 llvm/IR/Verifier.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/IR/Verifier.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/IR/Verifier.h
 llvm/Pass.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/Pass.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/Pass.h
 llvm/Support/raw_ostream.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/Support/raw_ostream.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/Support/raw_ostream.h
 llvm/Transforms/IPO/PassManagerBuilder.h
-/home/kazi/PA-proj/transformations/countStatic/llvm/Transforms/IPO/PassManagerBuilder.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/llvm/Transforms/IPO/PassManagerBuilder.h
 map
 -
 string

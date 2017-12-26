@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
+CMAKE_SOURCE_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
+CMAKE_BINARY_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build"
 
 # Include any dependencies generated for this target.
 include countStatic/CMakeFiles/CountStaticPass.dir/depend.make
@@ -59,16 +59,16 @@ include countStatic/CMakeFiles/CountStaticPass.dir/flags.make
 
 countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o: countStatic/CMakeFiles/CountStaticPass.dir/flags.make
 countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o: ../countStatic/CountStaticInstructions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o"
-	cd /home/kazi/PA-proj/transformations/build/countStatic && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o -c /home/kazi/PA-proj/transformations/countStatic/CountStaticInstructions.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o -c "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/CountStaticInstructions.cpp"
 
 countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i"
-	cd /home/kazi/PA-proj/transformations/build/countStatic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kazi/PA-proj/transformations/countStatic/CountStaticInstructions.cpp > CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/CountStaticInstructions.cpp" > CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i
 
 countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s"
-	cd /home/kazi/PA-proj/transformations/build/countStatic && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kazi/PA-proj/transformations/countStatic/CountStaticInstructions.cpp -o CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic/CountStaticInstructions.cpp" -o CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s
 
 countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o.requires:
 
@@ -91,8 +91,8 @@ CountStaticPass_EXTERNAL_OBJECTS =
 countStatic/libCountStaticPass.so: countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o
 countStatic/libCountStaticPass.so: countStatic/CMakeFiles/CountStaticPass.dir/build.make
 countStatic/libCountStaticPass.so: countStatic/CMakeFiles/CountStaticPass.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kazi/PA-proj/transformations/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libCountStaticPass.so"
-	cd /home/kazi/PA-proj/transformations/build/countStatic && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CountStaticPass.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared module libCountStaticPass.so"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CountStaticPass.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 countStatic/CMakeFiles/CountStaticPass.dir/build: countStatic/libCountStaticPass.so
@@ -104,10 +104,10 @@ countStatic/CMakeFiles/CountStaticPass.dir/requires: countStatic/CMakeFiles/Coun
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/requires
 
 countStatic/CMakeFiles/CountStaticPass.dir/clean:
-	cd /home/kazi/PA-proj/transformations/build/countStatic && $(CMAKE_COMMAND) -P CMakeFiles/CountStaticPass.dir/cmake_clean.cmake
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" && $(CMAKE_COMMAND) -P CMakeFiles/CountStaticPass.dir/cmake_clean.cmake
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/clean
 
 countStatic/CMakeFiles/CountStaticPass.dir/depend:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kazi/PA-proj/transformations /home/kazi/PA-proj/transformations/countStatic /home/kazi/PA-proj/transformations/build /home/kazi/PA-proj/transformations/build/countStatic /home/kazi/PA-proj/transformations/build/countStatic/CMakeFiles/CountStaticPass.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/countStatic" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic/CMakeFiles/CountStaticPass.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/depend
 

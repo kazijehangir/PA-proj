@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kazi/PA-proj/transformations
+CMAKE_SOURCE_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kazi/PA-proj/transformations/build
+CMAKE_BINARY_DIR = "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles /home/kazi/PA-proj/transformations/build/countStatic/CMakeFiles/progress.marks
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countStatic/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kazi/PA-proj/transformations/build/CMakeFiles 0
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/countStatic/CMakeFiles/progress.marks"
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countStatic/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countStatic/clean
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countStatic/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countStatic/preinstall
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countStatic/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countStatic/preinstall
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countStatic/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 countStatic/CMakeFiles/CountStaticPass.dir/rule:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f CMakeFiles/Makefile2 countStatic/CMakeFiles/CountStaticPass.dir/rule
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f CMakeFiles/Makefile2 countStatic/CMakeFiles/CountStaticPass.dir/rule
 .PHONY : countStatic/CMakeFiles/CountStaticPass.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ CountStaticPass: countStatic/CMakeFiles/CountStaticPass.dir/rule
 
 # fast build rule for target.
 CountStaticPass/fast:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/build
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/build
 .PHONY : CountStaticPass/fast
 
 CountStaticInstructions.o: CountStaticInstructions.cpp.o
@@ -131,7 +131,7 @@ CountStaticInstructions.o: CountStaticInstructions.cpp.o
 
 # target to build an object file
 CountStaticInstructions.cpp.o:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.o
 .PHONY : CountStaticInstructions.cpp.o
 
 CountStaticInstructions.i: CountStaticInstructions.cpp.i
@@ -140,7 +140,7 @@ CountStaticInstructions.i: CountStaticInstructions.cpp.i
 
 # target to preprocess a source file
 CountStaticInstructions.cpp.i:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.i
 .PHONY : CountStaticInstructions.cpp.i
 
 CountStaticInstructions.s: CountStaticInstructions.cpp.s
@@ -149,7 +149,7 @@ CountStaticInstructions.s: CountStaticInstructions.cpp.s
 
 # target to generate assembly for a file
 CountStaticInstructions.cpp.s:
-	cd /home/kazi/PA-proj/transformations/build && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(MAKE) -f countStatic/CMakeFiles/CountStaticPass.dir/build.make countStatic/CMakeFiles/CountStaticPass.dir/CountStaticInstructions.cpp.s
 .PHONY : CountStaticInstructions.cpp.s
 
 # Help Target
@@ -175,6 +175,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/kazi/PA-proj/transformations/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd "/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/build" && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

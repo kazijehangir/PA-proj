@@ -31,20 +31,20 @@ struct MarkSweepPass : public FunctionPass {
     // Initialize work list with critical instructions.
     for (auto& B : F) {
       for (auto& I : B) {
-        if (I.mayHaveSideEffects()) {
+        if (isCritical(&I)) {
           marked.insert(&I);
           workList.push(&I);
         }
       }
     }
-    errs() << "Initialization done.\n";
+    // errs() << "Initialization done.\n";
 
     // Perform Mark phase.
     while (!workList.empty()) {
       Instruction* currInst = workList.front();
-      errs() << "Evaluating instruction: " << currInst->getOpcodeName() << "\n";
+      // errs() << "Evaluating instruction: " << currInst->getOpcodeName() << "\n";
       workList.pop();
-      errs() << "Worklist size: " << workList.size() << "\n";
+      // errs() << "Worklist size: " << workList.size() << "\n";
       for (auto* d : getDefiningOfOps(currInst)) {
         auto search = marked.find(d);
         if (search == marked.end()) {
@@ -52,8 +52,8 @@ struct MarkSweepPass : public FunctionPass {
           workList.push(d);
         }
       }
-      errs() << "Added defining instructions for operands.\n";
-      errs() << "Worklist size: " << workList.size() << "\n";
+      // errs() << "Added defining instructions for operands.\n";
+      // errs() << "Worklist size: " << workList.size() << "\n";
 
       for (auto* b : getRDF(currInst->getParent())) {
         auto* term = b->getTerminator();
@@ -66,24 +66,38 @@ struct MarkSweepPass : public FunctionPass {
           }
         }
       }
-      errs() << "Added term inst from parent rdf BB.\n";
-      errs() << "Worklist size: " << workList.size() << "\n";
+      // errs() << "Added term inst from parent rdf BB.\n";
+      // errs() << "Worklist size: " << workList.size() << "\n";
     }
-    errs() << "Mark phase done.\n";
+    // errs() << "Mark phase done.\n";
 
     // Perform the Sweep phase.
     for (auto& B : F) {
       for (auto& I : B) {
         auto search = marked.find(&I);
         if (search == marked.end()) {
-          errs() << "found unmarked (noncritical) inst\n";
-          errs() << "instruction: " << I.getOpcodeName() << "\n";
+          if (!removeInst(&I)) {
+            errs() << "Failed to remove instruction.\n";
+          }
         }
       }
     }
-    errs() << "Sweep phase done.\n";
-
+    // errs() << "Sweep phase done.\n";
+    errs() << "Dead Code Elimination completed using Mark Sweep algorithm.\n";
     return true;
+  }
+
+  // NOTE: We only need to properly implement the function below.
+
+  // Returns true if instruction was successfully removed.
+  bool removeInst(Instruction* I) {
+    errs() << "found unmarked (noncritical) inst\n";
+    errs() << "instruction: " << I->getOpcodeName() << "\n";
+    return true;
+  }
+
+  bool isCritical(Instruction* I) {
+    return I->mayHaveSideEffects();
   }
 
   std::vector<Instruction*> getDefiningOfOps(Instruction* currInst) {
@@ -103,6 +117,7 @@ struct MarkSweepPass : public FunctionPass {
     rdf.push_back(b);
     return rdf;
   }
+
 };
 }  // namespace
 
