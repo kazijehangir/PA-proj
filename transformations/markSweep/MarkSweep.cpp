@@ -41,6 +41,7 @@ struct MarkSweepPass : public FunctionPass {
       bb_list.push_back(&B);
     }
 
+    // Construct Immediate Post Dominator & Post Doinator trees.
     std::map<BasicBlock*, std::vector<BasicBlock*> > ipdom;
     std::map<BasicBlock*, std::vector<BasicBlock*> > pdomi;
     for (int i = 0; i < bb_list.size(); i++) {
@@ -125,11 +126,16 @@ struct MarkSweepPass : public FunctionPass {
       for (auto& I : B) {
         auto search = marked.find(&I);
         if (search == marked.end()) {
-          // errs() << "Found unmarked (noncritical) inst: " <<
-          // I.getOpcodeName() << "\n";
           TerminatorInst* termin_inst = dyn_cast<TerminatorInst>(&I);
           CallInst* call_inst = dyn_cast<CallInst>(&I);
+          // Check if the instruction is a branch instruction.
           if (termin_inst) {
+            if (termin_inst->getNumSuccessors() > 1) {
+              if (!addCallToNearestPDom(termin_inst, usefulBlocks, pdomi)) {
+                errs() << "Failed to create branch instruction.\n";
+              }
+            }
+            dead.insert(&I);
           } else if (!call_inst) {
             dead.insert(&I);
           }
@@ -165,14 +171,24 @@ struct MarkSweepPass : public FunctionPass {
     return def;
   }
 
-  // NOTE: We only need to properly implement the functions below.
-
-  // Returns true if instruction was successfully removed.
-  bool removeInst(Instruction* I) {
-    errs() << "found unmarked (noncritical) inst\n";
-    errs() << "instruction: " << I->getOpcodeName() << "\n";
-    return true;
+  bool addCallToNearestPDom(
+      Instruction* I, std::unordered_set<BasicBlock*> usefulBlocks,
+      std::map<BasicBlock*, std::vector<BasicBlock*> >& pdomi) {
+    for (auto* bb : pdomi[I->getParent()]) {
+      auto search = usefulBlocks.find(bb);
+      if (!(search == usefulBlocks.end())) {
+        auto* resBI = BranchInst::Create(bb, I->getParent());
+        if (resBI) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+    }
+    return false;
   }
+
+  // NOTE: We only need to properly implement the functions below.
 
   bool isCritical(Instruction* I) {
     StoreInst* store_inst = dyn_cast<StoreInst>(I);
