@@ -9,12 +9,16 @@
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/MarkSweep.cpp
 llvm/ADT/StringRef.h
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/ADT/StringRef.h
+llvm/Analysis/PostDominators.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/Analysis/PostDominators.h
 llvm/IR/Function.h
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/IR/Function.h
 llvm/IR/InstrTypes.h
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/IR/InstrTypes.h
 llvm/IR/Instruction.h
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/IR/Instruction.h
+llvm/IR/Instructions.h
+/media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/IR/Instructions.h
 llvm/IR/LegacyPassManager.h
 /media/jehangir/5820F27320F25808/LUMS-Current/Fall2017/CS4612 - Program Analysis/project/PA-proj/transformations/markSweep/llvm/IR/LegacyPassManager.h
 llvm/IR/Module.h
@@ -118,6 +122,26 @@ llvm/Support/PointerLikeTypeTraits.h
 llvm/Support/type_traits.h
 /usr/lib/llvm-4.0/include/llvm/ADT/llvm/Support/type_traits.h
 
+/usr/lib/llvm-4.0/include/llvm/ADT/DepthFirstIterator.h
+llvm/ADT/GraphTraits.h
+/usr/lib/llvm-4.0/include/llvm/ADT/llvm/ADT/GraphTraits.h
+llvm/ADT/None.h
+/usr/lib/llvm-4.0/include/llvm/ADT/llvm/ADT/None.h
+llvm/ADT/Optional.h
+/usr/lib/llvm-4.0/include/llvm/ADT/llvm/ADT/Optional.h
+llvm/ADT/SmallPtrSet.h
+/usr/lib/llvm-4.0/include/llvm/ADT/llvm/ADT/SmallPtrSet.h
+llvm/ADT/iterator_range.h
+/usr/lib/llvm-4.0/include/llvm/ADT/llvm/ADT/iterator_range.h
+iterator
+-
+set
+-
+utility
+-
+vector
+-
+
 /usr/lib/llvm-4.0/include/llvm/ADT/EpochTracker.h
 llvm/Config/abi-breaking.h
 /usr/lib/llvm-4.0/include/llvm/ADT/llvm/Config/abi-breaking.h
@@ -141,6 +165,8 @@ cstdint
 -
 utility
 -
+
+/usr/lib/llvm-4.0/include/llvm/ADT/GraphTraits.h
 
 /usr/lib/llvm-4.0/include/llvm/ADT/Hashing.h
 llvm/Support/DataTypes.h
@@ -450,6 +476,12 @@ cassert
 cstddef
 -
 
+/usr/lib/llvm-4.0/include/llvm/Analysis/PostDominators.h
+llvm/IR/Dominators.h
+/usr/lib/llvm-4.0/include/llvm/Analysis/llvm/IR/Dominators.h
+llvm/IR/PassManager.h
+/usr/lib/llvm-4.0/include/llvm/Analysis/llvm/IR/PassManager.h
+
 /usr/lib/llvm-4.0/include/llvm/Config/abi-breaking.h
 
 /usr/lib/llvm-4.0/include/llvm/Config/llvm-config.h
@@ -512,6 +544,32 @@ cassert
 cstddef
 -
 
+/usr/lib/llvm-4.0/include/llvm/IR/CFG.h
+llvm/ADT/GraphTraits.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/GraphTraits.h
+llvm/ADT/iterator.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/iterator.h
+llvm/ADT/iterator_range.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/iterator_range.h
+llvm/IR/BasicBlock.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/BasicBlock.h
+llvm/IR/Function.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Function.h
+llvm/IR/InstrTypes.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/InstrTypes.h
+llvm/IR/Value.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Value.h
+llvm/Support/Casting.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/Casting.h
+llvm/Support/type_traits.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/type_traits.h
+cassert
+-
+cstddef
+-
+iterator
+-
+
 /usr/lib/llvm-4.0/include/llvm/IR/CallingConv.h
 
 /usr/lib/llvm-4.0/include/llvm/IR/Comdat.h
@@ -559,6 +617,22 @@ cassert
 -
 cstdint
 -
+
+/usr/lib/llvm-4.0/include/llvm/IR/Dominators.h
+llvm/ADT/DenseMapInfo.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/DenseMapInfo.h
+llvm/ADT/GraphTraits.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/GraphTraits.h
+llvm/ADT/SmallPtrSet.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/SmallPtrSet.h
+llvm/IR/CFG.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/CFG.h
+llvm/IR/PassManager.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/PassManager.h
+llvm/Pass.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Pass.h
+llvm/Support/GenericDomTree.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/GenericDomTree.h
 
 /usr/lib/llvm-4.0/include/llvm/IR/Function.h
 llvm/ADT/ilist_node.h
@@ -779,6 +853,54 @@ llvm/IR/Instruction.def
 /usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Instruction.def
 llvm/IR/Instruction.def
 /usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Instruction.def
+
+/usr/lib/llvm-4.0/include/llvm/IR/Instructions.h
+llvm/ADT/ArrayRef.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/ArrayRef.h
+llvm/ADT/iterator_range.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/iterator_range.h
+llvm/ADT/None.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/None.h
+llvm/ADT/SmallVector.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/SmallVector.h
+llvm/ADT/STLExtras.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/STLExtras.h
+llvm/ADT/StringRef.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/StringRef.h
+llvm/ADT/Twine.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/ADT/Twine.h
+llvm/IR/Attributes.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Attributes.h
+llvm/IR/CallingConv.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/CallingConv.h
+llvm/IR/Constant.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Constant.h
+llvm/IR/DerivedTypes.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/DerivedTypes.h
+llvm/IR/Function.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Function.h
+llvm/IR/InstrTypes.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/InstrTypes.h
+llvm/IR/OperandTraits.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/OperandTraits.h
+llvm/IR/Type.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Type.h
+llvm/IR/Use.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/Use.h
+llvm/IR/User.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/IR/User.h
+llvm/Support/AtomicOrdering.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/AtomicOrdering.h
+llvm/Support/Casting.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/Casting.h
+llvm/Support/ErrorHandling.h
+/usr/lib/llvm-4.0/include/llvm/IR/llvm/Support/ErrorHandling.h
+cassert
+-
+cstddef
+-
+cstdint
+-
 
 /usr/lib/llvm-4.0/include/llvm/IR/Intrinsics.gen
 
@@ -1118,6 +1240,10 @@ utility
 llvm/Support/DataTypes.h
 /usr/lib/llvm-4.0/include/llvm/Support/llvm/Support/DataTypes.h
 
+/usr/lib/llvm-4.0/include/llvm/Support/AtomicOrdering.h
+cstddef
+-
+
 /usr/lib/llvm-4.0/include/llvm/Support/CBindingWrapping.h
 llvm/Support/Casting.h
 /usr/lib/llvm-4.0/include/llvm/Support/llvm/Support/Casting.h
@@ -1218,6 +1344,26 @@ llvm/Support/SwapByteOrder.h
 llvm/Support/Compiler.h
 /usr/lib/llvm-4.0/include/llvm/Support/llvm/Support/Compiler.h
 string
+-
+
+/usr/lib/llvm-4.0/include/llvm/Support/GenericDomTree.h
+llvm/ADT/DenseMap.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/DenseMap.h
+llvm/ADT/DepthFirstIterator.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/DepthFirstIterator.h
+llvm/ADT/GraphTraits.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/GraphTraits.h
+llvm/ADT/STLExtras.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/STLExtras.h
+llvm/ADT/SmallPtrSet.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/SmallPtrSet.h
+llvm/ADT/SmallVector.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/ADT/SmallVector.h
+llvm/Support/Compiler.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/Support/Compiler.h
+llvm/Support/raw_ostream.h
+/usr/lib/llvm-4.0/include/llvm/Support/llvm/Support/raw_ostream.h
+algorithm
 -
 
 /usr/lib/llvm-4.0/include/llvm/Support/Host.h
