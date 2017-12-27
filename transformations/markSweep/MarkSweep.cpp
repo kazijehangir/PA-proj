@@ -68,15 +68,11 @@ struct MarkSweepPass : public FunctionPass {
         }
       }
     }
-    // errs() << "Initialization done.\n";
 
     // Perform Mark phase.
     while (!workList.empty()) {
       Instruction* currInst = workList.front();
-      // errs() << "Evaluating instruction: " << currInst->getOpcodeName() <<
-      // "\n";
       workList.pop();
-      // errs() << "Worklist size: " << workList.size() << "\n";
       for (auto* d : getDefiningOfOps(currInst)) {
         auto search = marked.find(d);
         if (search == marked.end()) {
@@ -85,8 +81,6 @@ struct MarkSweepPass : public FunctionPass {
           workList.push(d);
         }
       }
-      // errs() << "Added defining instructions for operands.\n";
-      // errs() << "Worklist size: " << workList.size() << "\n";
 
       for (auto* b : getRDF(currInst->getParent(), ipdom, pdomi)) {
         auto* term = b->getTerminator();
@@ -100,10 +94,10 @@ struct MarkSweepPass : public FunctionPass {
           }
         }
       }
-      // errs() << "Added term inst from parent rdf BB.\n";
-      // errs() << "Worklist size: " << workList.size() << "\n";
     }
-    // What is this part doing?
+
+    // Mark store instructions whose allocate instructions are already marked
+    // critical as critical as well.
     for (auto& B : F) {
       for (auto& I : B) {
         auto search = marked.find(&I);
@@ -201,9 +195,6 @@ struct MarkSweepPass : public FunctionPass {
   std::vector<BasicBlock*> getRDF(
       BasicBlock* b, std::map<BasicBlock*, BasicBlock*> ipdom,
       std::map<BasicBlock*, std::vector<BasicBlock*> > pdomi) {
-    // std::vector<BasicBlock*> rdf;
-    // rdf.push_back(b);
-    // return rdf;
     std::map<BasicBlock*, std::vector<BasicBlock*> > rdf;
     auto visited = std::unordered_set<BasicBlock*>();
     std::stack<BasicBlock*> workListCurr;
@@ -254,7 +245,6 @@ struct MarkSweepPass : public FunctionPass {
         }
       }
     }
-    // rdf[b].push_back(b);
     return rdf[b];
   }
 };
