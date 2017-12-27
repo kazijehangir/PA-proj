@@ -134,8 +134,8 @@ struct MarkSweepPass : public FunctionPass {
               if (!addCallToNearestPDom(termin_inst, usefulBlocks, pdomi)) {
                 errs() << "Failed to create branch instruction.\n";
               }
+              dead.insert(&I);
             }
-            dead.insert(&I);
           } else if (!call_inst) {
             dead.insert(&I);
           }
@@ -172,7 +172,7 @@ struct MarkSweepPass : public FunctionPass {
   }
 
   bool addCallToNearestPDom(
-      Instruction* I, std::unordered_set<BasicBlock*> usefulBlocks,
+      Instruction* I, std::unordered_set<BasicBlock*>& usefulBlocks,
       std::map<BasicBlock*, std::vector<BasicBlock*> >& pdomi) {
     for (auto* bb : pdomi[I->getParent()]) {
       auto search = usefulBlocks.find(bb);
