@@ -28,10 +28,13 @@ struct MarkSweepPass : public FunctionPass {
   virtual bool runOnFunction(Function& F) {
     auto workList = std::queue<Instruction*>();
     auto marked = std::unordered_set<Instruction*>();
+    auto usefulBlocks = std::unordered_set<BasicBlock*>();
+
     // Initialize work list with critical instructions.
     for (auto& B : F) {
       for (auto& I : B) {
         if (isCritical(&I)) {
+          usefulBlocks.insert(&B);
           marked.insert(&I);
           workList.push(&I);
         }
@@ -48,6 +51,7 @@ struct MarkSweepPass : public FunctionPass {
       for (auto* d : getDefiningOfOps(currInst)) {
         auto search = marked.find(d);
         if (search == marked.end()) {
+          usefulBlocks.insert(d->getParent());          
           marked.insert(d);
           workList.push(d);
         }
@@ -61,6 +65,7 @@ struct MarkSweepPass : public FunctionPass {
           Instruction* lastInst = dyn_cast<Instruction>(term);
           auto search = marked.find(lastInst);
           if (search == marked.end()) {
+            usefulBlocks.insert(lastInst->getParent());                      
             marked.insert(lastInst);
             workList.push(lastInst);
           }
@@ -87,19 +92,8 @@ struct MarkSweepPass : public FunctionPass {
     return true;
   }
 
-  // NOTE: We only need to properly implement the function below.
-
-  // Returns true if instruction was successfully removed.
-  bool removeInst(Instruction* I) {
-    errs() << "found unmarked (noncritical) inst\n";
-    errs() << "instruction: " << I->getOpcodeName() << "\n";
-    return true;
-  }
-
-  bool isCritical(Instruction* I) {
-    return I->mayHaveSideEffects();
-  }
-
+  // Returns a vector of instructions where the operands of the argument
+  // where defined.
   std::vector<Instruction*> getDefiningOfOps(Instruction* currInst) {
     std::vector<Instruction*> def;
     for (int i = 0; i < currInst->getNumOperands(); i++) {
@@ -110,6 +104,19 @@ struct MarkSweepPass : public FunctionPass {
       }
     }
     return def;
+  }
+
+  // NOTE: We only need to properly implement the functions below.
+
+  // Returns true if instruction was successfully removed.
+  bool removeInst(Instruction* I) {
+    errs() << "found unmarked (noncritical) inst\n";
+    errs() << "instruction: " << I->getOpcodeName() << "\n";
+    return true;
+  }
+
+  bool isCritical(Instruction* I) {
+    return I->mayHaveSideEffects();
   }
 
   std::vector<BasicBlock*> getRDF(BasicBlock* b) {
