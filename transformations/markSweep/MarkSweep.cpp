@@ -13,6 +13,7 @@
 
 #include <map>
 #include <queue>
+#include <stack>
 #include <string>
 #include <unordered_set>
 
@@ -42,13 +43,13 @@ struct MarkSweepPass : public FunctionPass {
     }
 
     // Construct Immediate Post Dominator & Post Doinator trees.
-    std::map<BasicBlock*, std::vector<BasicBlock*> > ipdom;
+    std::map<BasicBlock*, BasicBlock*> ipdom;
     std::map<BasicBlock*, std::vector<BasicBlock*> > pdomi;
     for (int i = 0; i < bb_list.size(); i++) {
       for (int j = 0; j < bb_list.size(); j++) {
         if (tree.properlyDominates(bb_list[i], bb_list[j])) {
-          ipdom[bb_list[i]].push_back(bb_list[j]);
-          pdomi[bb_list[j]].push_back(bb_list[i]);
+          ipdom[bb_list[j]] = bb_list[i];
+          pdomi[bb_list[i]].push_back(bb_list[j]);
         }
       }
     }
@@ -87,7 +88,7 @@ struct MarkSweepPass : public FunctionPass {
       // errs() << "Added defining instructions for operands.\n";
       // errs() << "Worklist size: " << workList.size() << "\n";
 
-      for (auto* b : getRDF(currInst->getParent())) {
+      for (auto* b : getRDF(currInst->getParent(), ipdom, pdomi)) {
         auto* term = b->getTerminator();
         if (term) {
           Instruction* lastInst = dyn_cast<Instruction>(term);
@@ -130,6 +131,7 @@ struct MarkSweepPass : public FunctionPass {
           CallInst* call_inst = dyn_cast<CallInst>(&I);
           // Check if the instruction is a branch instruction.
           if (termin_inst) {
+            // Ignore jumps.
             if (termin_inst->getNumSuccessors() > 1) {
               if (!addCallToNearestPDom(termin_inst, usefulBlocks, pdomi)) {
                 errs() << "Failed to create branch instruction.\n";
@@ -196,14 +198,69 @@ struct MarkSweepPass : public FunctionPass {
     return (I->mayHaveSideEffects() && !store_inst) || return_inst;
   }
 
-  std::vector<BasicBlock*> getRDF(BasicBlock* b) {
-    std::vector<BasicBlock*> rdf;
-    rdf.push_back(b);
-    return rdf;
+  std::vector<BasicBlock*> getRDF(
+      BasicBlock* b, std::map<BasicBlock*, BasicBlock*> ipdom,
+      std::map<BasicBlock*, std::vector<BasicBlock*> > pdomi) {
+    // std::vector<BasicBlock*> rdf;
+    // rdf.push_back(b);
+    // return rdf;
+    std::map<BasicBlock*, std::vector<BasicBlock*> > rdf;
+    auto visited = std::unordered_set<BasicBlock*>();
+    std::stack<BasicBlock*> workListCurr;
+    std::stack<BasicBlock*> workListPrev;
+
+    workListCurr.push(b);
+    workListPrev.push(b);
+
+    BasicBlock *currB, *prevB;
+    bool visitedPDom;
+    while (!workListCurr.empty()) {
+      currB = workListCurr.top();
+      prevB = workListPrev.top();
+      workListCurr.pop();
+      workListPrev.pop();
+
+      auto search = visited.find(currB);
+      if (search == visited.end()) {
+        visited.insert(currB);
+        for (BasicBlock* p : predecessors(currB)) {
+          if (ipdom[p] != currB) {
+            rdf[b].push_back(p);
+          }
+        }
+      }
+
+      visitedPDom = false;
+      for (int i = 0; i < pdomi[currB].size(); i++) {
+        auto search = visited.find(pdomi[currB][i]);
+        if (search == visited.end()) {
+          workListCurr.push(pdomi[currB][i]);
+          workListPrev.push(currB);
+          visitedPDom = true;
+        }
+      }
+
+      if (!visitedPDom) {
+        if (currB == prevB) {
+          break;
+        }
+        for (int i = 0; i < rdf[currB].size(); i++) {
+          // is this fine?
+          if (ipdom[prevB] != rdf[currB][i]) {
+            rdf[prevB].push_back(rdf[currB][i]);
+            workListCurr.pop();
+            workListPrev.pop();
+          }
+        }
+      }
+    }
+    // rdf[b].push_back(b);
+    return rdf[b];
   }
 };
 }  // namespace
 
 char MarkSweepPass::ID = 0;
-static RegisterPass<MarkSweepPass> X("markSweep", "Count Static Instructions",
+static RegisterPass<MarkSweepPass> X("markSweep",
+                                     "Dead Code Elimination using Mark Sweep",
                                      false, false);
